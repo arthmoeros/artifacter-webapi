@@ -120,7 +120,7 @@ export class RestExpressServer {
             router.get('/ui/*', function (req, res) {
                 res.sendFile(path.resolve(__dirname + '/../ui/index.html'));
             });
-            console.log(col.green('Embedded UI Flag is present, you can access @artifacter/ui on path \'/ui\''));
+            console.log(col.green('Embedded UI Flag is present, you can access @artifacter/ui on path \'/ui/\''));
         }
         this.expressApp.use(router);
     }
