@@ -2,7 +2,7 @@
 
 ### Artifacter's artifacts webapi core connector
 
-### Checkout Github's parsed README for a better visualization! -> https://github.com/arthmoeros/artifacter-webapi
+<!--### Checkout Github's parsed README for a better visualization! -> https://github.com/arthmoeros/artifacter-webapi-->
 
 #### What's this? - Intro
 This is Artifacter's Web API connector for the core (previously coupled with @artifacter/core), it makes use of the core module to expose all its API via a RESTful API.
