@@ -1,6 +1,6 @@
 {
   "name": "@artifacter/webapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Artifacter's Web API",
   "main": "index.js",
   "bin": {

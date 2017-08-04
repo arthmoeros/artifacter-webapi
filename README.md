@@ -85,6 +85,3 @@ docker run -v <host-path>:/etc/artifacter/ -p <host-port>:8080 -d arthmoeros/art
 
 The Docker image stores the temporary files within the container, the config folder must be provided as a binded volume in the *docker run* command, otherwise it will start with the sample configuration.
 -->
-
-#### What's coming next? - Planned features for a future release
-Not much, this is a second version and I already covered pretty much everything I wanted to achieve, it is still lacking a configuration validation check and maybe some queued generation with some queue framework, also I thought about a security layer and migrating the configuration storage to a MongoDB, if you have any other suggestion I would gladly hear you out, along with a use case.
