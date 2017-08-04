@@ -70,7 +70,6 @@ Retrieves a generated artifact, once is retrieved it is deleted from the tempora
 #### How do I handle all the Configuration? - Artifacter's Core Configuration
 Check out the @artifacter/core [README](https://github.com/arthmoeros/artifacter-core#how-do-i-make-a-form-configuration---form-configuration-schema)
 
-<!--
 #### I don't want a RESTful API, I want an UI and everything working - UI and Docker Image
 If you need an User Interface for this, use [@artifacter/ui](https://github.com/arthmoeros/artifacter-ui) and connect it to the Artifacter's API host.
 
@@ -84,4 +83,3 @@ docker run -v <host-path>:/etc/artifacter/ -p <host-port>:8080 -d arthmoeros/art
 ```
 
 The Docker image stores the temporary files within the container, the config folder must be provided as a binded volume in the *docker run* command, otherwise it will start with the sample configuration.
--->
