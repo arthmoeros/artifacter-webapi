@@ -1,6 +1,6 @@
 # ![artifacter-logo](https://raw.githubusercontent.com/arthmoeros/artifacter-ui/master/src/assets/img/rsz_artifacter-logo.png)@artifacter/webapi
 
-### Artifacter's artifacts webapi core connector
+### Artifacter's webapi core connector
 
 <!--### Checkout Github's parsed README for a better visualization! -> https://github.com/arthmoeros/artifacter-webapi-->
 
