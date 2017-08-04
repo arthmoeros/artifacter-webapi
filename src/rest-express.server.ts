@@ -8,6 +8,7 @@ import * as http from "http";
 import * as cors from "cors";
 import * as fs from "fs";
 import * as col from "colors/safe";
+import * as path from "path";
 
 import { RestApi } from "./rest.api";
 import { ServerConfig } from "./server-config";
@@ -52,12 +53,12 @@ export class RestExpressServer {
      */
     private constructor() {
         console.info(col.green("Starting REST express server"));
-        console.info(col.gray("Temp files folder is in: "+tmpFilesFolder));
-        if(process.env.ARTIFACTER_TMP == null){
+        console.info(col.gray("Temp files folder is in: " + tmpFilesFolder));
+        if (process.env.ARTIFACTER_TMP == null) {
             console.info(col.yellow("If you want to set your own Temp files path, set the ARTIFACTER_TMP env variable"));
         }
-        console.info(col.gray("Config files folder is in: "+configurationsFolder));
-        if(process.env.ARTIFACTER_CONFIG == null){
+        console.info(col.gray("Config files folder is in: " + configurationsFolder));
+        if (process.env.ARTIFACTER_CONFIG == null) {
             console.info(col.yellow("If you want to set your own Config files path, set the ARTIFACTER_CONFIG env variable"));
         }
 
@@ -113,6 +114,14 @@ export class RestExpressServer {
                 }
             }
         });
+        if (process.env.EMBEDDED_UI) {
+            this.expressApp.use('/ui/assets', express.static(path.resolve(__dirname + '/../ui/assets')));
+            this.expressApp.use('/ui/js', express.static(path.resolve(__dirname + '/../ui/js')));
+            router.get('/ui/*', function (req, res) {
+                res.sendFile(path.resolve(__dirname + '/../ui/index.html'));
+            });
+            console.log(col.green('Embedded UI Flag is present, you can access @artifacter/ui on path \'/ui\''));
+        }
         this.expressApp.use(router);
     }
 
