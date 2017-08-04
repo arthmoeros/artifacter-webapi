@@ -1,0 +1,32 @@
+{
+  "name": "@artifacter/webapi",
+  "version": "1.0.0",
+  "description": "Artifacter's Web API",
+  "main": "index.js",
+  "bin": {
+    "artifacter-serve": "./src/start-server.js"
+  },
+  "scripts": {
+    "start": "node ./src/start-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthmoeros/artifacter-webapi.git"
+  },
+  "author": "arth",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/arthmoeros/artifacter-webapi/issues"
+  },
+  "homepage": "https://github.com/arthmoeros/artifacter-webapi#readme",
+  "dependencies": {
+    "@artifacter/common": "^1.0.5",
+    "@artifacter/core": "^2.1.2",
+    "body-parser": "^1.17.2",
+    "colors": "^1.1.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2"
+  }
+}
