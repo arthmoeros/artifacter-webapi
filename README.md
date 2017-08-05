@@ -12,6 +12,8 @@ You can git clone this same repo and start it just like this
 ```bash
 git clone https://github.com/arthmoeros/artifacter-webapi/
 npm install
+npm install -g typescript # if you dont have typescript installed
+tsc -P .
 npm start
 ```
 
