@@ -1,10 +1,10 @@
 {
-  "name": "@artifacter/webapi",
+  "name": "@qsdt/webapi",
   "version": "1.0.1",
-  "description": "Artifacter's Web API",
+  "description": "QSDT's Web API",
   "main": "index.js",
   "bin": {
-    "artifacter-serve": "./src/start-server.js"
+    "qsdt-serve": "./src/start-server.js"
   },
   "scripts": {
     "start": "node ./src/start-server.js",
@@ -12,17 +12,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arthmoeros/artifacter-webapi.git"
+    "url": "git+https://github.com/arthmoeros/qsdt-webapi.git"
   },
   "author": "arth",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/arthmoeros/artifacter-webapi/issues"
+    "url": "https://github.com/arthmoeros/qsdt-webapi/issues"
   },
-  "homepage": "https://github.com/arthmoeros/artifacter-webapi#readme",
+  "homepage": "https://github.com/arthmoeros/qsdt-webapi#readme",
   "dependencies": {
-    "@artifacter/common": "^1.0.5",
-    "@artifacter/core": "^2.1.2",
+    "@qsdt/common": "^1.0.5",
+    "@qsdt/core": "^2.1.2",
     "body-parser": "^1.17.2",
     "colors": "^1.1.2",
     "cors": "^2.8.4",

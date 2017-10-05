@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as col from "colors/safe";
-import { configurationsFolder } from "@artifacter/core";
+import { configurationsFolder } from "@qsdt/core";
 
 export class ServerConfig {
 

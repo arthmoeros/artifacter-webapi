@@ -1,5 +1,5 @@
 import { Application, Router, Response } from "express";
-import { Annotation, RestMethod } from "@artifacter/common";
+import { Annotation, RestMethod } from "@qsdt/common";
 
 import * as express from "express";
 import * as logger from "morgan";
@@ -12,11 +12,11 @@ import * as path from "path";
 
 import { RestApi } from "./rest.api";
 import { ServerConfig } from "./server-config";
-import { tmpFilesFolder, configurationsFolder } from "@artifacter/core";
+import { tmpFilesFolder, configurationsFolder } from "@qsdt/core";
 
 /**
  * @class WorkerHttpApiServer
- * @see npm @artifacter/worker
+ * @see npm @qsdt/worker
  * @author arthmoeros (Arturo Saavedra) artu.saavedra@gmail.com
  * 
  * This singleton class starts up a nodejs express server, serving the REST api available
@@ -54,12 +54,12 @@ export class RestExpressServer {
     private constructor() {
         console.info(col.green("Starting REST express server"));
         console.info(col.gray("Temp files folder is in: " + tmpFilesFolder));
-        if (process.env.ARTIFACTER_TMP == null) {
-            console.info(col.yellow("If you want to set your own Temp files path, set the ARTIFACTER_TMP env variable"));
+        if (process.env.QSDT_TMP == null) {
+            console.info(col.yellow("If you want to set your own Temp files path, set the QSDT_TMP env variable"));
         }
         console.info(col.gray("Config files folder is in: " + configurationsFolder));
-        if (process.env.ARTIFACTER_CONFIG == null) {
-            console.info(col.yellow("If you want to set your own Config files path, set the ARTIFACTER_CONFIG env variable"));
+        if (process.env.QSDT_CONFIG == null) {
+            console.info(col.yellow("If you want to set your own Config files path, set the QSDT_CONFIG env variable"));
         }
 
         console.info(col.cyan("Setting up express.js"));
@@ -120,7 +120,7 @@ export class RestExpressServer {
             router.get('/ui/*', function (req, res) {
                 res.sendFile(path.resolve(__dirname + '/../ui/index.html'));
             });
-            console.log(col.green('Embedded UI Flag is present, you can access @artifacter/ui on path \'/ui/\''));
+            console.log(col.green('Embedded UI Flag is present, you can access @qsdt/ui on path \'/ui/\''));
         }
         this.expressApp.use(router);
     }

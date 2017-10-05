@@ -1,11 +1,11 @@
-import { RestService, RestMethod, ContentType } from "@artifacter/common";
+import { RestService, RestMethod, ContentType } from "@qsdt/common";
 import { Request, Response, NextFunction } from "express";
 
-import { Artifacter } from "@artifacter/core";
+import { QSDT } from "@qsdt/core";
 
 /**
  * @class RestApi
- * @see npm @artifacter/worker
+ * @see npm @qsdt/worker
  * @author arthmoeros (Arturo Saavedra) artu.saavedra@gmail.com
  * 
  * This class defines the methods available as a REST API, each method for this
@@ -14,7 +14,7 @@ import { Artifacter } from "@artifacter/core";
  */
 export class RestApi {
 
-	private readonly api: Artifacter = new Artifacter();
+	private readonly api: QSDT = new QSDT();
 
 	/**
 	 * Requests an artifact generation and responds synchronously with an uuid
@@ -57,7 +57,7 @@ export class RestApi {
 	}
 
 	/**
-	 * Retrieves a list of available forms configurations for Artifacter
+	 * Retrieves a list of available forms configurations for QSDT
 	 * @param req 
 	 * @param res 
 	 * @param next 
@@ -75,7 +75,7 @@ export class RestApi {
 	}
 
 	/**
-	 * Retrieves a specific forms configuration for Artifacter with the id provided
+	 * Retrieves a specific forms configuration for QSDT with the id provided
 	 * @param req 
 	 * @param res 
 	 * @param next 

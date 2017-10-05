@@ -6,7 +6,7 @@ WORKDIR $UIDIR
 
 RUN apt-get update
 RUN apt-get install -y git
-RUN git clone https://github.com/arthmoeros/artifacter-ui $UIDIR
+RUN git clone https://github.com/arthmoeros/qsdt-ui $UIDIR
 
 RUN npm install
 RUN npm install -g @angular/cli
@@ -27,7 +27,7 @@ RUN node ui-bundle-fixer.js
 ENV APPDIR /usr/src/app
 
 WORKDIR $APPDIR
-RUN mkdir /var/artifacter
+RUN mkdir /var/qsdt
 RUN mv $UIDIR/dist $APPDIR/ui
 
 COPY package.json .
@@ -38,8 +38,8 @@ ADD . $APPDIR
 RUN tsc -P $APPDIR
 EXPOSE 8080
 
-ENV ARTIFACTER_TMP=/var/artifacter/
-ENV ARTIFACTER_CONFIG=/etc/artifacter/
+ENV QSDT_TMP=/var/qsdt/
+ENV QSDT_CONFIG=/etc/qsdt/
 ENV EMBEDDED_UI=yes
 
 CMD [ "npm", "start"]
