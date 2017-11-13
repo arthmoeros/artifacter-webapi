@@ -1,4 +1,4 @@
-FROM node:boron
+FROM node:carbon
 
 ENV UIDIR /usr/src/ui
 RUN mkdir $UIDIR
