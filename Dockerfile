@@ -42,4 +42,4 @@ ENV QSDT_TMP=/var/qsdt/
 ENV QSDT_CONFIG=/etc/qsdt/
 ENV EMBEDDED_UI=yes
 
-CMD [ "npm", "start"]
+CMD [ "sh", "docker-starter.sh"]
