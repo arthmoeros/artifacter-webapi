@@ -70,9 +70,12 @@ export class RestApi {
 		responseContentType: ContentType.applicationJson
 	})
 	public getConfigurations(req: Request, res: Response, next: NextFunction) {
+		console.log("holi");
 		this.api.getForms().then((response) => {
 			res.status(200);
 			res.end(JSON.stringify(response));
+		}).catch((err) => {
+			console.log(err)
 		});
 	}
 
