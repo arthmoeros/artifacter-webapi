@@ -30,10 +30,11 @@ export class RestApi {
 		responseContentType: ContentType.applicationJson
 	})
 	public postArtifactGeneration(req: Request, res: Response, next: NextFunction) {
-		let tmpName: string = this.api.requestArtifactGeneration(req.body);
-		res.location("/generatedArtifacts/" + tmpName);
-		res.status(201);
-		res.end();
+		this.api.requestArtifactGeneration(req.body).then((tmpName) => {
+			res.location("/generatedArtifacts/" + tmpName);
+			res.status(201);
+			res.end();
+		});
 	}
 
 	/**
@@ -69,9 +70,10 @@ export class RestApi {
 		responseContentType: ContentType.applicationJson
 	})
 	public getConfigurations(req: Request, res: Response, next: NextFunction) {
-		let response: string[] = this.api.getForms();
-		res.status(200);
-		res.end(JSON.stringify(response));
+		this.api.getForms().then((response) => {
+			res.status(200);
+			res.end(JSON.stringify(response));
+		});
 	}
 
 	/**
@@ -88,9 +90,10 @@ export class RestApi {
 	})
 	public getConfiguration(req: Request, res: Response, next: NextFunction) {
 		let id: string = req.params['id'];
-		let configuration: string = this.api.getForm(id);
-		res.status(200);
-		res.end(configuration);
+		this.api.getForm(id).then((configuration) => {
+			res.status(200);
+			res.end(configuration);
+		});
 	}
 
 }

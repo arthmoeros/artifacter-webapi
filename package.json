@@ -1,6 +1,6 @@
 {
   "name": "@qsdt/webapi",
-  "version": "1.0.1",
+  "version": "3.0.0",
   "description": "QSDT's Web API",
   "main": "index.js",
   "bin": {
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/arthmoeros/qsdt-webapi#readme",
   "dependencies": {
     "@qsdt/common": "^1.0.5",
-    "@qsdt/core": "^2.1.2",
+    "@qsdt/core": "^3.0.0",
     "body-parser": "^1.17.2",
     "colors": "^1.1.2",
     "cors": "^2.8.4",
