@@ -9,8 +9,8 @@ RUN apt-get install -y git
 RUN git clone https://github.com/arthmoeros/qsdt-ui $UIDIR
 
 RUN npm install
-RUN npm install -g @angular/cli
-RUN ng build --env=embedded --base-href /ui/
+RUN npm install @angular/cli
+RUN node_modules/.bin/./ng build --env=embedded --base-href /ui/
 RUN mkdir $UIDIR/dist/js
 RUN mv $UIDIR/dist/inline.bundle.js $UIDIR/dist/js/inline.bundle.js
 RUN mv $UIDIR/dist/polyfills.bundle.js $UIDIR/dist/js/polyfills.bundle.js
@@ -32,10 +32,10 @@ RUN mv $UIDIR/dist $APPDIR/ui
 
 COPY package.json .
 RUN npm install
-RUN npm install -g typescript
+RUN npm install typescript
 
 ADD . $APPDIR
-RUN tsc -P $APPDIR
+RUN node_modules/.bin/./tsc -P $APPDIR
 EXPOSE 8080
 
 ENV QSDT_TMP=/var/qsdt/
