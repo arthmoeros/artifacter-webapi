@@ -10,7 +10,7 @@ RUN git clone https://github.com/arthmoeros/qsdt-ui $UIDIR
 
 RUN npm install
 RUN npm install @angular/cli
-RUN node_modules/.bin/./ng build --env=embedded --base-href /ui/
+RUN node_modules/.bin/./ng build --environment=embedded --base-href /ui/
 RUN mkdir $UIDIR/dist/js
 RUN mv $UIDIR/dist/inline.bundle.js $UIDIR/dist/js/inline.bundle.js
 RUN mv $UIDIR/dist/polyfills.bundle.js $UIDIR/dist/js/polyfills.bundle.js
