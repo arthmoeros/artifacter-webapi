@@ -42,3 +42,7 @@ config/server-config-deployed.json
 push_heroku.bat
 .gitignore_heroku
 .git_heroku
+Dockerfile
+.dockerignore
+Dockerfile-embedded
+ui-embedder.sh
