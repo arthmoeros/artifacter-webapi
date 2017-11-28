@@ -13,7 +13,7 @@ ADD . $APPDIR
 RUN node_modules/.bin/./tsc -P $APPDIR
 EXPOSE 8080
 
-ENV QSDT_TMP=/var/qsdt
-ENV QSDT_CONFIG=/etc/qsdt
+ENV QSDT_TMP=/var/qsdt/
+ENV QSDT_CONFIG=/etc/qsdt/
 
 CMD [ "sh", "docker-starter.sh"]
