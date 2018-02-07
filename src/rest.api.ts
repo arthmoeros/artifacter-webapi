@@ -45,7 +45,7 @@ export class RestApi {
 	 */
 	@RestService({
 		method: RestMethod.GET,
-		resource: "/generatedArtifacts/:uuid",
+		resource: "/generatedArtifacts/:uuid/generatedArtifacts.zip",
 		requestContentType: ContentType.urlEncoded,
 		responseContentType: ContentType.applicationZip
 	})
