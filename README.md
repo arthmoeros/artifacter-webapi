@@ -85,3 +85,7 @@ docker run -v <host-path>:/etc/qsdt/ -p <host-port>:8080 -d arthmoeros/qsdt
 ```
 
 The Docker image stores the temporary files within the container, the config folder must be provided as a binded volume in the *docker run* command, otherwise it will start with the sample configuration.
+
+### TO-DO
+
+1. Expose checkSyntax from Template Processor through an API call
