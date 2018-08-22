@@ -22,7 +22,7 @@
   "homepage": "https://github.com/arthmoeros/qsdt-webapi#readme",
   "dependencies": {
     "@qsdt/common": "^2.0.3",
-    "@qsdt/core": "^3.0.3",
+    "@qsdt/core": "^3.0.4",
     "body-parser": "^1.17.2",
     "colors": "^1.1.2",
     "cors": "^2.8.4",
